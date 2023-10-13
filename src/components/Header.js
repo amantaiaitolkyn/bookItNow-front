@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
+import { Outlet, Link } from "react-router-dom";
 
 export default function Header(){
     const [nav, setNav] = useState(false);
@@ -13,16 +14,16 @@ export default function Header(){
                 <span className='name'>Book It</span>
                 <ul className={nav ? ["menu", "active"].join(' ') : ["menu"]}>
                     <li>
-                        <a href="">Home</a>
+                        <Link to ="home">Home</Link>
                     </li>
                     <li>
-                        <a href="">Stay</a>
+                        <Link to ="stay">Stay</Link>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <Link to="about">About</Link>
                     </li>
                     <li>
-                        <a href="">Sign in</a>
+                        <Link to="">Sign in</Link>
                     </li>
                 </ul>
                 <div onClick={() => setNav(!nav)} className= "mobile_btn">
@@ -30,6 +31,7 @@ export default function Header(){
                 </div>
             </div>
             <div className='presentation'></div>
+            <Outlet/>
         </header>
     )
 }

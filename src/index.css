@@ -7,10 +7,12 @@
 ul,li {
     list-style: none;
 }
+
 a {
     text-decoration: none;
     color: #ece8e8;
 }
+
 body {
     background-image: url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80');
     background-size: cover;
@@ -29,6 +31,7 @@ body {
     margin: 50px auto;
 
 }
+
 .horizontal-line {
     border: 0.5px solid #aba8a8;
     margin: 20px 0;
@@ -38,6 +41,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .name {
     display: flex;
     justify-content: center;
@@ -51,12 +55,14 @@ body {
     float: left;
     list-style: none;
 }
+
 .menu li {
     display: inline;
     margin-left: 70px;
     cursor: pointer;
     transition: opacity 500ms;
 }
+
 .menu li:hover {
    opacity: 0.5;
 }
@@ -67,6 +73,15 @@ body {
     font-weight: 600;
     top: 300px;
     margin: 40px 100px 50px 600px;
+    color: #ece8e8;
+}
+
+.stay {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    /* top: 300px; */
+    /* margin: 40px 100px 50px 600px; */
     color: #ece8e8;
 }
 
