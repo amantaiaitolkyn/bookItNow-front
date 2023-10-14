@@ -5,11 +5,13 @@ import React from 'react';
 import { Outlet } from "react-router-dom";
 function App() {
     return (
+        <>
+
         <div className='wrapper'>
-            <hr className="horizontal-line" />
             <Header />
             {/* <Outlet/> */}
         </div>
+        </>
     );
 }
 

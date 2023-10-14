@@ -19,22 +19,79 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-color: darkgray;
+    background-color: whitesmoke;
     height: 100vh;
     color: aliceblue;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
+    margin: 0; /* Убрать внешний отступ */
+    overflow: hidden;
+    overflow-y: auto; /* Add overflow-y to make it scrollable */
 }
 
-.wrapper {
-    width: 1280px;
-    margin: 50px auto;
+html {
+    padding: 0; /* Убрать внутренний отступ */
+}
+
+.after-header {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh; /* Set the minimum height to fill the viewport */
+    width: 100%;
+    height: auto; /* Remove fixed height */
+    margin-top: 270px; /* Add some margin to separate it from the content */
+    padding-top: 0; /* Add some padding at the bottom to create space */
 
 }
+
+.content {
+    font-size: 24px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.content h2 {
+    color: rgb(185, 157, 117); /* Gold color */
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    height: 16.8px;
+    letter-spacing: 1.4px;
+    line-height: 16.8px;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 324.788px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content p {
+    color: black; /* Black color for the p element */
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    height: 16.8px;
+    letter-spacing: 1.4px;
+    line-height: 16.8px;
+    margin-bottom: 0px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 324.788px;
+    -webkit-font-smoothing: antialiased;
+}
+
 
 .horizontal-line {
     border: 0.5px solid #aba8a8;
-    margin: 20px 0;
+    margin: 40px 0 20px 80px;
+    width: 1280px;
 }
 
 .logo{
@@ -67,14 +124,6 @@ body {
    opacity: 0.5;
 }
 
-.home-page {
-    position: absolute;
-    font-size: 30px;
-    font-weight: 600;
-    top: 300px;
-    margin: 40px 100px 50px 600px;
-    color: #ece8e8;
-}
 
 .stay {
     position: absolute;
@@ -115,6 +164,36 @@ footer{
 .navigation-links a:hover {
     color: black; /* Change the color to black on hover */
 }
+.navigation-links.active{
+    text-decoration: underline;
+}
+.home-page {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.home-page header {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.home-page h1 {
+    font-size: 36px;
+    margin: 10px 0;
+    font-family: "Marcellus", serif;
+}
+
+.home-page p {
+    font-size: 18px;
+    margin: 10px 0;
+    font-family: "Marcellus", serif;
+}
+
 
 
 .button-container {
@@ -143,6 +222,26 @@ footer{
     background-color: #111111; /* Change the background color on hover */
     color: #ffffff; /* Change text color on hover */
 }
+.image-slider {
+    text-align: center;
+    padding: 20px;
+}
+
+.image-slider img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: 5px solid white; /* Add a border to the images */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow to the images */
+}
+.slider-control.prev {
+    left: 20px;
+}
+
+.slider-control.next {
+    right: 20px;
+}
+
 
 
 @media (max-width: 960px) {
@@ -182,4 +281,5 @@ footer{
     }
 
 }
+
 
