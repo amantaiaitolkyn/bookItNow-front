@@ -387,6 +387,55 @@ html {
 }
 
 /* Additional styles can be added as needed */
+/* Add a background image for the "About" page */
+.about {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding: 50px 0; /* Add padding to center the content vertically */
+    text-align: center; /* Center the text horizontally */
+}
+.about-container {
+    max-width: 800px;
+    margin: 90px auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+    text-align: center; /* Center the text within the container */
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #3e4e55; /* Dark gray color */
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-size: 18px;
+    color: #333; /* Slightly darker gray color */
+    font-family: 'Roboto Mono', monospace;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+/* Define styles for the video container */
+.video-container {
+    text-align: center;
+    margin-top: 240px;
+    margin-bottom: 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 0;
+}
 
 
 

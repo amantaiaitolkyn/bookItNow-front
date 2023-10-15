@@ -32,7 +32,7 @@ export default function Home() {
         );
     };
     return (
-        <>
+        <div className="home">
             <div className="home-page">
                 <header>
                     <h1>Welcome to the hotel booking system!</h1>
@@ -60,6 +60,6 @@ export default function Home() {
                 />
                 </div>
             </div>
-        </>
+        </div>
     );
 }
