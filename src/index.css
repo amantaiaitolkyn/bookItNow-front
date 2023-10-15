@@ -46,6 +46,7 @@ html {
     margin-top: 270px; /* Add some margin to separate it from the content */
     padding-top: 0; /* Add some padding at the bottom to create space */
 
+
 }
 
 .content {
@@ -134,10 +135,6 @@ html {
     color: #ece8e8;
 }
 
-footer{
-    text-align: center;
-    margin-bottom: 900px;
-}
 
 .mobile_btn {
     display: none;
@@ -151,8 +148,8 @@ footer{
     margin: 0px 10px; /* Adjust margin as needed for spacing */
 }
 
+
 .navigation-links a {
-    text-decoration: none;
     color: white; /* Set the default color to white */
     font-size: 18px;
     margin: 0 20px;
@@ -164,9 +161,7 @@ footer{
 .navigation-links a:hover {
     color: black; /* Change the color to black on hover */
 }
-.navigation-links.active{
-    text-decoration: underline;
-}
+
 .home-page {
     background-size: cover;
     background-position: center;
@@ -234,13 +229,164 @@ footer{
     border: 5px solid white; /* Add a border to the images */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow to the images */
 }
+.image-slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Hide overflow content if necessary */
+}
+
+.slider-control {
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+    margin:19px
+}
+
 .slider-control.prev {
-    left: 20px;
+    color: black;
 }
 
 .slider-control.next {
-    right: 20px;
+    color: black;
 }
+/* CSS for the Footer */
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 50px 10px 20px 40px;
+    text-align: justify;
+    font-family: 'Josefin Sans', sans-serif; /* Match the font-family */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    flex-basis: 40%;
+}
+
+.footer-text h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-text p {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.footer-contact {
+    flex-basis: 25%;
+}
+
+.footer-contact h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-contact a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-newsletter {
+    flex-basis: 20%;
+    margin-right: 70px;
+}
+.footer-newsletter label{
+    margin-top: 10px;
+}
+
+.footer-newsletter h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-newsletter input[type="text"] {
+    background: transparent;
+    width: 60%;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 15px;
+    border: 0.8px solid white;
+    font-family: 'Josefin Sans', sans-serif; /* Match the font-family */
+}
+.footer-newsletter input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.footer-newsletter button {
+    background-color: #333a3a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif; /* Match the font-family */
+}
+
+.footer-newsletter button:hover {
+    background-color: #e2eaf3;
+}
+
+.footer-legal {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-legal label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.footer-legal input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.footer-social {
+    flex-basis: 100%;
+    margin-top: 20px;
+}
+
+.footer-social h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social li {
+    margin-bottom: 15px;
+}
+
+/* Additional styles can be added as needed */
 
 
 

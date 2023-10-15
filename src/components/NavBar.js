@@ -13,7 +13,7 @@ export default function NavBar(){
                     <span className='name'>Book It</span>
                 <div className="button-container">
                     <button className="login-button">Log In</button>
-                    <button className="logout-button">Log Out</button>
+                    <button className="logout-button">Register</button>
                 </div>
             </div>
              </div>
