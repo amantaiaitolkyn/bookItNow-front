@@ -8,6 +8,8 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Header from './components/Header';
 import HandleError from './components/handleErrors';
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "stay",
         element: <Stay/>,
+      },
+      {
+        path: "login",
+        element: <Login/>,
+      },
+      {
+        path: "register",
+        element: <SignUp/>,
       },
       {
         path: "about",
