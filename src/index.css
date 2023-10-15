@@ -260,6 +260,8 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
+    position: relative; /* Position the footer */
+    z-index: 1; /* Add a z-index if needed */
 }
 
 .footer-content {
@@ -437,8 +439,68 @@ html {
     border: 0;
 }
 
+.stay {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding: 50px 0; /* Add padding to center the content vertically */
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 100px;
+}
 
+.room-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+}
+
+.room-card {
+    width: calc(50% - 20px); /* Распределение по двум столбцам с отступами */
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room-image img {
+    width: 100%;
+    height: auto;
+}
+
+.room-details {
+    padding: 20px;
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room-header h3 {
+    margin: 0;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #ff6600;
+}
+
+.room-size {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
 @media (max-width: 960px) {
     .mobile_btn {
         display: block;
@@ -474,7 +536,93 @@ html {
     .active {
         left: 0;
     }
-
 }
+/* ReservationForm.css */
+.success-message {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #338a44; /* Text color */
+    border: 2px solid #338045; /* Border around the message */
+    border-radius: 5px;
+    padding: 6px 6px 6px 6px ;
+    text-align: center;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.success-message::before {
+    content: "✔"; /* Checkmark symbol before the message */
+    display: block;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.reservation-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255); /* Set the form background color with opacity */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 90px;
+    margin-top: 100px;
+    width: 87%;
+}
+
+.form-group.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    align-items: center;
+}
+
+.col {
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: transparent;
+    color: #333;
+    margin-top: 5px;
+}
+
+.button-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.but {
+    background-color: rgb(185, 157, 117);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 15%;
+    margin-left: 20px;
+}
+
+.but:hover {
+    background-color: #0056b3;
+}
+
 
 

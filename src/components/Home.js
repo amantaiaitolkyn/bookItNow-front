@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Header from "./Header";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
+import ReservationForm from "./ReservationForm";
 export default function Home() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = [
@@ -38,6 +38,7 @@ export default function Home() {
                     <h1>Welcome to the hotel booking system!</h1>
                     <p>Find and book the best hotels for your next adventure.</p>
                 </header>
+                <ReservationForm/>
             </div>
             <div className="after-header">
                 <div className="content">
