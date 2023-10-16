@@ -7,6 +7,12 @@ export default function Header(){
 
     return (
         <header>
+            <div className="contact-info">
+                <p>RUE DE LAUSANNE, 1202 GENÈVE, SWITZERLAND</p>
+                <p>TEL: +41 22 345 67 88</p>
+                <p>FAX: +41 22 345 67 89</p>
+                <p>Email: <a href="mailto:BOOKING@COZYSTAY.COM">BOOKING@COZYSTAY.COM</a></p>
+            </div>
             <hr className="horizontal-line" />
             <NavBar />
             <div>

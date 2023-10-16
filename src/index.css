@@ -49,6 +49,8 @@ html {
 
 }
 
+
+
 .content {
     font-size: 24px;
     margin-top: 10px;
@@ -91,7 +93,7 @@ html {
 
 .horizontal-line {
     border: 0.5px solid #aba8a8;
-    margin: 40px 0 20px 80px;
+    margin: 10px 0 20px 80px;
     width: 1280px;
 }
 
@@ -108,7 +110,6 @@ html {
     color: #111111;
 
 }
-
 .menu {
     float: left;
     list-style: none;
@@ -219,7 +220,6 @@ html {
 }
 .image-slider {
     text-align: center;
-    padding: 20px;
 }
 
 .image-slider img {
@@ -250,7 +250,105 @@ html {
 .slider-control.next {
     color: black;
 }
-/* CSS for the Footer */
+.geolocation{
+    color:black;
+    font-size: 20px;
+}
+
+
+.contact-form {
+    flex: 1; /* Take up remaining space */
+    padding: 10px 40px 80px 120px;
+    background: none; /* Remove background color */
+    border: none; /* Remove the border */
+    width: 30%;
+}
+
+.contact-form h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Add a simple border for input elements */
+    width: 90%;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%;
+    margin-left: 27px;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.contact-section {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000; /* Black color */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content {
+    font-size: 16px;
+    color: #000;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* Add this CSS to style the contact information */
+.contact-info {
+    background: transparent; /* Set the background to transparent */
+    color: #ffffff; /* Text color */
+    display: flex; /* Display items in one row */
+    justify-content: space-between; /* Spread items evenly in the row */
+    padding: 20px 0 0 0 ;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin: 2px 50px; /* Adjust margins for spacing */
+}
+
+.contact-info a {
+    color: #ffffff; /* Link color */
+    text-decoration: none;
+}
+
+
+    /* CSS for the Footer */
 .footer {
     background-color: #111111;
     color: #ffffff;
