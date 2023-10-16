@@ -3,6 +3,7 @@ import Header from "./Header";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import ReservationForm from "./ReservationForm";
+import {Outlet} from "react-router-dom";
 export default function Home() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = [
