@@ -48,7 +48,24 @@ html {
 
 
 }
+/* Add this CSS to style the contact information */
+.contact-info {
+    background: transparent; /* Set the background to transparent */
+    color: #ffffff; /* Text color */
+    display: flex; /* Display items in one row */
+    justify-content: space-between; /* Spread items evenly in the row */
+    padding: 20px 0 0 0 ;
+    font-size: 14px;
+}
 
+.contact-info p {
+    margin: 2px 50px; /* Adjust margins for spacing */
+}
+
+.contact-info a {
+    color: #ffffff; /* Link color */
+    text-decoration: none;
+}
 
 
 .content {
@@ -104,7 +121,6 @@ html {
 
 .name {
     display: flex;
-    text-align: center;
     justify-content: center;
     font-size: 20px;
     font-family: 'Young Serif', serif;
@@ -259,7 +275,8 @@ html {
 
 .contact-form {
     flex: 1; /* Take up remaining space */
-    padding: 10px 40px 80px 120px;
+    padding: 10px 40px 80px 400px;
+    margin-left: 20px;
     background: none; /* Remove background color */
     border: none; /* Remove the border */
     width: 30%;
@@ -329,25 +346,25 @@ html {
     text-align: center;
     margin-bottom: 10px;
 }
-/* Add this CSS to style the contact information */
-.contact-info {
-    background: transparent; /* Set the background to transparent */
-    color: #ffffff; /* Text color */
-    display: flex; /* Display items in one row */
-    justify-content: space-between; /* Spread items evenly in the row */
-    padding: 20px 0 0 0 ;
-    font-size: 14px;
+.contact-form-content {
+    display: flex; /* Display children side by side */
+    align-items: center; /* Vertically center content */
 }
 
-.contact-info p {
-    margin: 2px 50px; /* Adjust margins for spacing */
+.contact-form-image {
+    padding: 2px; /* Adjust the spacing as needed */
+    margin-left: 80px;
+
 }
 
-.contact-info a {
-    color: #ffffff; /* Link color */
-    text-decoration: none;
+.contact-form-fields {
+    flex: 1; /* Take up 50% of the width */
+    padding: 10px; /* Adjust the spacing as needed */
 }
 
+.contact-form-image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+}
 
     /* CSS for the Footer */
 .footer {
@@ -360,6 +377,7 @@ html {
     left: 0;
     width: 100%;
 }
+
 
 .footer-content {
     display: flex;
