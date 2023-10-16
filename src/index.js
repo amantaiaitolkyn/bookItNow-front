@@ -8,7 +8,7 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Header from './components/Header';
 import HandleError from './components/handleErrors';
-import Login from "./components/Login";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
@@ -31,10 +31,7 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About/>,
-    }, {
-        path: "login", // Add a route for login
-        element: <Login/>,
-      }
+    }
     ]
   } 
 
