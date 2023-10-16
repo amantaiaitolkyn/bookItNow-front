@@ -203,7 +203,7 @@ html {
 .login-button, .logout-button {
     background-color: transparent;
     color: #111111; /* Text color */
-    padding: 6px 9px; /* Padding for the button */
+    padding: 3px 9px; /* Padding for the button */
     border: 2px solid #111111; /* Button border */
     cursor: pointer;
     font-size: 16px;
@@ -260,8 +260,6 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    position: relative; /* Position the footer */
-    z-index: 1; /* Add a z-index if needed */
 }
 
 .footer-content {
@@ -558,6 +556,7 @@ button {
 }
 
 
+
 .reservation-form {
     display: flex;
     justify-content: space-between;
@@ -623,6 +622,8 @@ select {
 .but:hover {
     background-color: #0056b3;
 }
+
+
 
 
 

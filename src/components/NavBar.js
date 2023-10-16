@@ -12,7 +12,9 @@ export default function NavBar(){
                 <div>
                     <span className='name'>Book It</span>
                 <div className="button-container">
-                    <button className="login-button">Log In</button>
+                    <Link to="/login">
+                        <button className="login-button">LogIn</button>
+                    </Link>
                     <button className="logout-button">Register</button>
                 </div>
             </div>
