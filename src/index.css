@@ -28,7 +28,11 @@ body {
     overflow: hidden;
     overflow-y: auto; /* Add overflow-y to make it scrollable */
 }
-
+.logout-button{
+    width:200px;
+    height: 50px;
+    margin-left: 1200px;
+}
 html {
     padding: 0; /* Убрать внутренний отступ */
 }

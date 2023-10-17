@@ -11,11 +11,6 @@ export default function NavBar(){
                 </Link>
                 <div>
                     <span className='name'>Book It</span>
-                <div className="button-container">
-                    <Link to="/"></Link>
-                    <Link to="login"><button className="login-button">Log In</button></Link>
-                    <Link to="register"><button className="logout-button">Register</button></Link>
-                </div>
             </div>
              </div>
         </div>

@@ -5,6 +5,12 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import ReservationForm from "./ReservationForm";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
+import { useNavigate } from 'react-router-dom';
+import {useDispatch} from 'react-redux'
+import { useAuth } from '../hooks/use-auth';
+import {removeUser} from '../store/slices/userSlice'
+
+
 
 // Replace with your Google Maps API Key
 const googleMapsAPIKey = "AIzaSyDBgUdd0zWAYM3F2Y2TVgc06PW3H4NScUo";
@@ -22,6 +28,9 @@ function MapComponent(props) {
 const WrappedMapComponent = withScriptjs(withGoogleMap(MapComponent));
 
 export default function Home() {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const {isAuth} = useAuth();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [formData, setFormData] = useState({
         name: "",
@@ -77,8 +86,9 @@ export default function Home() {
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
     };
-    return (
+    return isAuth ? (
         <div className="home">
+            <button className="logout-button" onClick={()=> dispatch(removeUser())}>Log out</button>
             <div className="home-page">
                 <header>
                     <h1>Welcome to the hotel booking system!</h1>
@@ -157,5 +167,7 @@ export default function Home() {
                 </div>
             )}
         </div>
-    );
+    ): (
+        navigate('/login')
+    )
 }

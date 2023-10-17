@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import './LoginRegister.css';
-import {useDispatch} from 'react-redux';
-// import {setUser} from "../store/slices/userSlice";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+import {useDispatch} from 'react-redux';
 import {setUser} from "../store/slices/userSlice";
 import { Link } from "react-router-dom";
-const Login = () => {
+
+
+function Register() {
     const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const handleLogin = (email, password) => {
+
+    const handleRegister = (email, password) => {
         const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
                 console.log(user);
                 dispatch(setUser({
@@ -22,20 +25,22 @@ const Login = () => {
                     id: user.uid,
                     token: user.accessToken,
                 }));
-                navigate('/home');
+                navigate('/');
             })
-            .catch((error) => {
-            console.error('Error signing in:', error);
-            });
+            .catch(console.error)
     }
 
     return (
         <div className="container">
             <div className="header">
-                <div className="text">Sign In</div>
+                <div className="text">Register</div>
                 <div className="underline"></div>
             </div>
             <form className="inputs">
+                <div className="input">
+                    <img src="/person-icon.svg" width={30} alt=""/>
+                    <input type="name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+                </div>
                 <div className="input">
                     <img src="/email-icon.svg" width={30} alt=""/>
                     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -46,12 +51,13 @@ const Login = () => {
                 </div>
             </form>
             <div className="submit-container">
-                <button type="button" onClick={() => handleLogin(email, password)}>Sign In</button>
-
+                <button type="button"  onClick={() => handleRegister(email, password)}>Register</button>
             </div>
-            <p className="text2">Or <Link to="/register" className="link"> Register </Link></p>
+            <p className="text2">
+                Already have an account?  <Link to="/login" className="link"> Log in</Link>
+            </p>
         </div>
     );
 }
 
-export default Login;
+export default Register;

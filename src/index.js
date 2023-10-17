@@ -9,6 +9,12 @@ import Home from "./components/Home";
 import Header from './components/Header';
 import HandleError from './components/handleErrors';
 import Login from "./components/Login";
+import Register from "./components/Register";
+import {Provider} from 'react-redux';
+import {store} from './store';
+import './firebase';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
@@ -31,15 +37,22 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About/>,
-    }, {
-        path: "login", // Add a route for login
+      },
+      {
+        path: "login",
         element: <Login/>,
+      },
+      {
+        path: "register",
+        element: <Register/>,
       }
     ]
   } 
 
 ])
 root.render(
-  <RouterProvider router = {router} />
+    <Provider store={store}>
+      <RouterProvider router = {router} />
+    </Provider>
 );
 
