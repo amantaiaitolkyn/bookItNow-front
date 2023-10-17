@@ -28,7 +28,6 @@ const Login = () => {
             console.error('Error signing in:', error);
             });
     }
-
     return (
         <div className="container">
             <div className="header">

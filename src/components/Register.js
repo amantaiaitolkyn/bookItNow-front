@@ -7,7 +7,6 @@ function Register() {
     const [password, setPassword] = useState('');
 
 
-
     return (
         <div className="container">
             <div className="header">

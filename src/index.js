@@ -36,8 +36,7 @@ const router = createBrowserRouter([
         element: <Login/>,
       }
     ]
-  } 
-
+  }
 ])
 root.render(
   <RouterProvider router = {router} />
