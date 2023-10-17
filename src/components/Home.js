@@ -88,10 +88,10 @@ export default function Home() {
     };
     return isAuth ? (
         <div className="home">
-            <button className="logout-button" onClick={()=> dispatch(removeUser())}>Log out</button>
+            <button className="logout-button" onClick={()=> dispatch(removeUser())}>Log out</button>{/*logout*/}
             <div className="home-page">
                 <header>
-                    <h1>Welcome to the hotel booking system!</h1>
+                    <h1>Welcome to the hotel booking system! </h1>
                     <p>Find and book the best hotels for your next adventure.</p>
                 </header>
                 <ReservationForm/>
