@@ -15,7 +15,8 @@ export default function NavBar(){
                     <Link to="/login">
                         <button className="login-button">LogIn</button>
                     </Link>
-                    <button className="logout-button">Register</button>
+                    <Link to="/signup">
+                        <button className="logout-button">Register</button></Link>
                 </div>
             </div>
              </div>

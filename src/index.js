@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Header from './components/Header';
 import HandleError from './components/handleErrors';
 import Login from "./components/Login";
+import Register from "./components/Register";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
@@ -34,7 +35,11 @@ const router = createBrowserRouter([
     }, {
         path: "login", // Add a route for login
         element: <Login/>,
+      }, {
+        path: "signup", // Add a route for sign up
+        element: <Register/>,
       }
+
     ]
   } 
 
