@@ -12,7 +12,7 @@ const roomData = [
         price: "399",
         description:
             "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square meters, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
-        image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" // Sample Unsplash image URL
+        image: "https://cozystay.loftocean.com/mountain-hotel/wp-content/uploads/sites/7/2023/04/img-25-1200x801.jpg"
     },
     {
         title: "Deluxe Room",
@@ -24,41 +24,56 @@ const roomData = [
         price: "199",
         description:
             "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square meters, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
-        image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" // Sample Unsplash image URL
+        image: "https://cozystay.loftocean.com/mountain-hotel/wp-content/uploads/sites/7/2023/04/marvin-meyer-fBdlytm6Hp8-unsplash.jpg"
+    },
+    {
+        title: "Double Room",
+        size: "25m²",
+        view: "Partial Mountain View",
+        guests: "2",
+        beds: "2",
+        bathrooms: "1",
+        price: "219",
+        description:
+            "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square metres, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
+        image: "https://cozystay.loftocean.com/mountain-hotel/wp-content/uploads/sites/7/2023/04/ralph-ravi-kayden-FqqiAvJejto-unsplash-1200x800.jpg"
     }
 ];
 
 const Stay = () => {
     return (
         <div className="stay">
-            <h2>Rooms & Suites</h2>
-            <p className="room-sign">Warmth. Care. Peace.</p>
+            <div className="words">
+                <h2>Rooms & Suites</h2>
+                <p className="room-sign">Warmth. Care. Peace.</p>
+            </div>
             <div className="date-picker">
-                {/* Date picker components go here */}
             </div>
             <div className="room-cards">
                 {roomData.map((room, index) => (
                     <div className="room-card" key={index}>
                         <div className="room-image">
-                            {/* Add room images here */}
                             <img src={room.image} alt={room.title} />
                         </div>
                         <div className="room-details">
                             <div className="room-header">
-                                <h3>{room.title}</h3>
+                                <h4>{room.title}</h4>
                                 <p className="price">
-                                    <FontAwesomeIcon icon="dollar-sign" />
-                                    {room.price} / NIGHT
+                                    ${room.price} / NIGHT
                                 </p>
                             </div>
-                            <p className="room-size">{room.size}</p>
-                            <p>{room.view}</p>
-                            <p>{room.guests} Guests</p>
-                            <p>{room.size} m²</p>
-                            <p>{room.beds} Beds</p>
-                            <p>{room.bathrooms} Bathrooms</p>
-                            <p>{room.description}</p>
-                            <button>Discover More</button>
+                            <p className="room-size golden">{room.size} / {room.view} / {room.guests} Guests</p>
+                            <ul className="icon">
+                                <li><img src='/maximize.png' height={20}/>  {room.size}</li>
+                                <li><img src='/user.png' height={20}/>  {room.guests} Guests</li>
+                                <li><img src='/bed.png' height={20}/> {room.beds} Bed</li>
+                                <li><img src='/bathtub.png' height={20}/> {room.bathrooms} Bathroom</li>
+                            </ul>
+                            <p className="room-size">{room.description}</p>
+                            <div className="bottom">
+                                <h6>Discover more</h6>
+                                <img className='next' src='next.png' height={18}/>
+                            </div>
                         </div>
                     </div>
                 ))}

@@ -11,7 +11,7 @@ function App() {
         <div className='wrapper'>
             <Header />
             {/* <Outlet/> */}
-            <Footer />
+            {/* <Footer /> */}
         </div>
         </>
     );
