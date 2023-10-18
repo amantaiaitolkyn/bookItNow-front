@@ -1,10 +1,37 @@
 import React, { useState } from 'react';
 import './LoginRegister.css';
 
+import { useNavigate } from 'react-router-dom';
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+import {useDispatch} from 'react-redux';
+import {setUser} from "../store/slices/userSlice";
+import { Link } from "react-router-dom";
+
+
+
 function Register() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+
+    const handleRegister = (email, password) => {
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(({user}) => {
+                console.log(user);
+                dispatch(setUser({
+                    email: user.email,
+                    id: user.uid,
+                    token: user.accessToken,
+                }));
+                navigate('/');
+            })
+            .catch(console.error)
+    }
 
 
     return (
@@ -28,9 +55,12 @@ function Register() {
                 </div>
             </form>
             <div className="submit-container">
-                <button type="button">Register</button>
-            </div>
 
+                <button type="button"  onClick={() => handleRegister(email, password)}>Register</button>
+            </div>
+            <p className="text2">
+                Already have an account?  <Link to="/login" className="link"> Log in</Link>
+            </p>
         </div>
     );
 }
