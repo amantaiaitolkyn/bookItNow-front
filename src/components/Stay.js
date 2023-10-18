@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
 
 const roomData = [
     {
@@ -64,15 +64,15 @@ const Stay = () => {
                             </div>
                             <p className="room-size golden">{room.size} / {room.view} / {room.guests} Guests</p>
                             <ul className="icon">
-                                <li><img src='/maximize.png' height={20}/>  {room.size}</li>
-                                <li><img src='/user.png' height={20}/>  {room.guests} Guests</li>
-                                <li><img src='/bed.png' height={20}/> {room.beds} Bed</li>
-                                <li><img src='/bathtub.png' height={20}/> {room.bathrooms} Bathroom</li>
+                                <li><img src='/maximize.png' alt='Maximize' height={20}/>  {room.size}</li>
+                                <li><img src='/user.png' alt='User' height={20}/>  {room.guests} Guests</li>
+                                <li><img src='/bed.png' alt='Bed' height={20}/> {room.beds} Bed</li>
+                                <li><img src='/bathtub.png' alt='Bathtub' height={20}/> {room.bathrooms} Bathroom</li>
                             </ul>
                             <p className="room-size">{room.description}</p>
                             <div className="bottom">
                                 <h6>Discover more</h6>
-                                <img className='next' src='next.png' height={18}/>
+                                <img className='next' src='/next.png' alt='Next' height={18}/>
                             </div>
                         </div>
                     </div>

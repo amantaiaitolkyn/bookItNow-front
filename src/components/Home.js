@@ -25,7 +25,7 @@ function MapComponent(props) {
         </GoogleMap>
     );
 }
-// const WrappedMapComponent = withScriptjs(withGoogleMap(MapComponent));
+const WrappedMapComponent = withScriptjs(withGoogleMap(MapComponent));
 
 export default function Home() {
     const navigate = useNavigate();
@@ -150,8 +150,8 @@ export default function Home() {
 
             </div>
             {/* Display the map */}
-            
-                {/* <div className="map">
+
+                <div className="map">
                     <h2>Location Map</h2>
                     <WrappedMapComponent
                         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${googleMapsAPIKey}`}
@@ -164,7 +164,7 @@ export default function Home() {
                         latitude={geolocation.latitude}
                         longitude={geolocation.longitude}
                     />
-                </div> */}
+                </div>
         </div>
     ): (
         navigate('/login')
