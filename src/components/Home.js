@@ -13,7 +13,7 @@ import {removeUser} from '../store/slices/userSlice'
 
 
 // Replace with your Google Maps API Key
-const googleMapsAPIKey = "AIzaSyDBgUdd0zWAYM3F2Y2TVgc06PW3H4NScUo";
+const googleMapsAPIKey = "AIzaSyD5MCvK4Bt-bxFRy_XYBmRPYUhIzgANfb8";
 
 function MapComponent(props) {
     return (
@@ -61,6 +61,11 @@ export default function Home() {
         }
         return () => clearInterval(interval);
     }, []);
+    useEffect(() => {
+        if (!isAuth) {
+            navigate("/login");
+        }
+    }, [isAuth, navigate]);
     const prevImage = () => {
         setCurrentImageIndex((prevIndex) =>
             prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -74,11 +79,18 @@ export default function Home() {
         });
     };
 
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here, you can handle the form submission logic
-        // For example, you can send the formData to an API or display it on the page.
         console.log(formData);
+
+        // Clear the form data after submission
+        setFormData({
+            name: "",
+            email: "",
+            message: "",
+        });
     };
 
     const nextImage = () => {
@@ -86,7 +98,7 @@ export default function Home() {
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
     };
-    return isAuth ? (
+    return (
         <div className="home">
             <button className="logout-button" onClick={()=> dispatch(removeUser())}>Log out</button>{/*logout*/}
             <div className="home-page">
@@ -151,22 +163,20 @@ export default function Home() {
             </div>
             {/* Display the map */}
 
+            {geolocation && (
                 <div className="map">
                     <h2>Location Map</h2>
                     <WrappedMapComponent
                         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${googleMapsAPIKey}`}
-                        loadingElement={<div style={{ height: `100%` }} />
-                        }
-                        containerElement={<div style={{ height: `400px`}} />
-                        }
-                        mapElement={<div style={{ height: `100%` }} />
-                        }
+                        loadingElement={<div style={{ height: `100%` }} />}
+                        containerElement={<div style={{ height: `400px` }} />}
+                        mapElement={<div style={{ height: `100%` }} />}
                         latitude={geolocation.latitude}
                         longitude={geolocation.longitude}
                     />
                 </div>
+            )}
+
         </div>
-    ): (
-        navigate('/login')
-    )
+    );
 }

@@ -28,7 +28,7 @@ export default function Footer(){
                     <button>Subscribe</button>
                     <div style={{ display: 'flex', flexDirection: 'column'}}>
                     <label>
-                        <input type="checkbox" checked={isAgreed} onChange={handleAgreeToggle} />
+                        <input type="checkbox"  checked={isAgreed} onChange={handleAgreeToggle} />
                         I agree to the Privacy Policy
                     </label>
                     </div>

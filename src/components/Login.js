@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LoginRegister.css';
+// import './LoginRegister.css';
 import {useDispatch} from 'react-redux';
 // import {setUser} from "../store/slices/userSlice";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";

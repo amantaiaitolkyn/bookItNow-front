@@ -152,9 +152,8 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    padding: 50px 80px; /* Add padding to center the content vertically */
+    padding: 20px 80px; /* Add padding to center the content vertically */
     margin-bottom: 50px;
-    margin-top: 120px;
 }
 
 .stay li {
@@ -188,6 +187,7 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 
 .room-card {
     width: calc(50% - 20px); /* Распределение по двум столбцам с отступами */
@@ -282,7 +282,7 @@ html {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 100px 0;
+    padding: 20px 0;
 }
 
 .home-page header {
@@ -372,7 +372,7 @@ html {
 
 .contact-form {
     flex: 1; /* Take up remaining space */
-    padding: 10px 40px 80px 400px;
+    padding: 10px 40px 80px 500px;
     margin-left: 20px;
     background: none; /* Remove background color */
     border: none; /* Remove the border */
@@ -435,7 +435,9 @@ html {
     margin-top: 10px;
     text-align: center;
 }
-
+.async{
+    flex: 1;
+}
 .content {
     font-size: 16px;
     color: #000;
@@ -467,7 +469,7 @@ html {
 .footer {
     background-color: #111111;
     color: #ffffff;
-    padding: 50px 10px 20px 40px;
+    padding: 50px 10px 20px 35px;
     text-align: justify;
     font-family: 'Josefin Sans', sans-serif; /* Match the font-family */
     bottom: 0;
@@ -479,11 +481,10 @@ html {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .footer-text {
-    flex-basis: 40%;
+    flex-basis: 33%;
 }
 
 .footer-text h2 {
@@ -524,7 +525,7 @@ html {
 
 .footer-newsletter {
     flex-basis: 20%;
-    margin-right: 70px;
+    margin-right: 90px;
 }
 .footer-newsletter label{
     margin-top: 10px;
@@ -552,33 +553,28 @@ html {
 }
 
 .footer-newsletter button {
-    background-color: #333a3a;
-    color: #ffffff;
+    background-color: #0f1010;
+    color: #e2eaf3;
     border: none;
+    margin-top: 10px;
+    width: 70%;
     padding: 10px 20px;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif; /* Match the font-family */
 }
 
 .footer-newsletter button:hover {
-    background-color: #e2eaf3;
+    background-color: #333a3a;
 }
+
 
 .footer-legal {
     flex-basis: 100%;
     text-align: center;
     margin-top: 30px;
+    font-size: 15px;
 }
 
-.footer-legal label {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-
-.footer-legal input[type="checkbox"] {
-    margin-right: 10px;
-}
 
 .footer-social {
     flex-basis: 100%;
@@ -597,7 +593,7 @@ html {
 }
 
 .footer-social li {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 /* Additional styles can be added as needed */
@@ -609,6 +605,7 @@ html {
     background-blend-mode: multiply;
     padding: 50px 0; /* Add padding to center the content vertically */
     text-align: center; /* Center the text horizontally */
+    flex: 1;
 }
 .about-container {
     max-width: 800px;
@@ -644,6 +641,7 @@ html {
     margin-bottom: 0;
 }
 
+
 .video-container iframe {
     width: 100%;
     max-width: 800px;
@@ -657,7 +655,8 @@ html {
     background-blend-mode: multiply;
     padding: 50px 80px; /* Add padding to center the content vertically */
     margin-bottom: 50px;
-    margin-top: 120px;
+    margin-top: 200px;
+    flex: 1;
 }
 
 .stay li {
@@ -684,6 +683,7 @@ html {
     font-size: 40px;
     text-align: center;
     font-family: "Marcellus", sans-serif;
+    margin-bottom: 60px;
 }
 
 .room-cards {
@@ -825,10 +825,10 @@ button {
     justify-content: space-between;
     align-items: center;
     background: rgb(255, 255, 255); /* Set the form background color with opacity */
-    padding: 20px;
+    padding: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-left: 90px;
+    margin-left: 70px;
     margin-top: 100px;
     width: 87%;
 }
@@ -841,15 +841,18 @@ button {
 }
 
 .col {
-    flex: 1;
+    flex:1;
 }
 
 label {
     font-weight: bold;
-    display: block;
+    display: flex;
     text-align: left;
     font-size: 14px;
     color: #333;
+    margin: 0;
+    padding-right: 100px;
+    width: 80%;
 }
 
 input,
@@ -878,13 +881,14 @@ select {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 15%;
+    width: 13%;
     margin-left: 20px;
 }
 
 .but:hover {
     background-color: #0056b3;
 }
+
 
 
 

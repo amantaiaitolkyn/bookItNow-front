@@ -30,7 +30,6 @@ export default function Header(){
                 </div>
             </div>
             <div className='presentation'></div>
-            <Outlet/>
         </header>
     )
 }
