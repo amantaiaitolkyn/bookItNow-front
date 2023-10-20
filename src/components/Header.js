@@ -20,7 +20,7 @@ export default function Header(){
                     <div className="navigation-links">
                         <Link to="/"></Link>
                         <Link to="home">Home</Link>
-                        <Link to="stay">Stay</Link>
+                        <Link to="rooms">Stay</Link>
                         <Link to="about">About</Link>
                     </div>
 

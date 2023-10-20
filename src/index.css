@@ -244,8 +244,6 @@ html {
     padding-top: 3px;
 }
 
-
-
 .mobile_btn {
     display: none;
 }
@@ -661,6 +659,9 @@ html {
     padding-right: 30px;
     font-size: 15px;
 
+}
+.stay Link{
+    color: #1A1B1A;
 }
 
 .icon {

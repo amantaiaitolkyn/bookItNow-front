@@ -10,6 +10,7 @@ import Header from './components/Header';
 import HandleError from './components/handleErrors';
 import Login from "./components/Login";
 import Register from "./components/Register";
+import RoomDetail from "./components/RoomDetail";
 import {Provider} from 'react-redux';
 import {store} from './store';
 import './firebase';
@@ -31,8 +32,12 @@ const router = createBrowserRouter([
         element: <Home/>,
       }, 
       {
-        path: "stay",
+        path: "rooms",
         element: <Stay/>,
+      },
+      {
+        path: "rooms/:id",
+        element: <RoomDetail/>,
       },
       {
         path: "about",
@@ -41,8 +46,6 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login/>,
-
-
       },
       {
         path: "register",
