@@ -110,23 +110,23 @@ export default function Home() {
             </div>
             <div className="after-header">
                 <div className="content">
-                        <h2>Find Your Perfect Getaway</h2>
-                        <p>Discover incredible hotels and book your dream vacation today.</p>
-                    </div>
+                    <h2>Find Your Perfect Getaway</h2>
+                    <p>Discover incredible hotels and book your dream vacation today.</p>
+                </div>
             </div>
             <div className="image-slider">
                 <div className="image-slider-container">
                     <FontAwesomeIcon
-                    icon={faArrowLeft}
-                    className="slider-control prev"
-                    onClick={prevImage}
-                />
-                <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
-                <FontAwesomeIcon
-                    icon={faArrowRight}
-                    className="slider-control next"
-                    onClick={nextImage}
-                />
+                        icon={faArrowLeft}
+                        className="slider-control prev"
+                        onClick={prevImage}
+                    />
+                    <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+                    <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className="slider-control next"
+                        onClick={nextImage}
+                    />
                 </div>
             </div>
             {/* Contact Form */}

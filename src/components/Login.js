@@ -24,9 +24,7 @@ const Login = () => {
                 }));
                 navigate('/home');
             })
-            .catch((error) => {
-            console.error('Error signing in:', error);
-            });
+            .catch(() => alert('Invalid user!'))
     }
 
     return (

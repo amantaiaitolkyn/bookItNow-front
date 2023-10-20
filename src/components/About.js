@@ -1,5 +1,7 @@
 // About.js
 
+// About.js
+
 import React from "react";
 import Footer from "./Footer";
 
