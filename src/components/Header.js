@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 export default function Header(){
     const [nav, setNav] = useState(false);
