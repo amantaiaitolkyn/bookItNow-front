@@ -174,13 +174,8 @@ html {
     margin-right: 6px;
 }
 
-.words {
-    width: 100%;
-    height: 450px;
-    font-size: 40px;
-    text-align: center;
-    font-family: "Marcellus", sans-serif;
-}
+
+
 
 .room-cards {
     display: flex;
@@ -686,6 +681,8 @@ html {
     margin-bottom: 60px;
 }
 
+
+
 .room-cards {
     display: flex;
     flex-wrap: wrap;
@@ -888,6 +885,29 @@ select {
 .but:hover {
     background-color: #0056b3;
 }
+
+.date-picker {
+    display: flex;
+    justify-content: space-around;
+    width: 78%;
+    margin: 20px auto;
+}
+
+.date-picker form {
+    display: flex;
+    align-items: center;
+}
+
+.date-picker input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.date-picker h3{
+    color: #333a3a;
+}
+
 
 
 

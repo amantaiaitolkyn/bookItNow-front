@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
 
 const roomData = [
@@ -41,6 +41,27 @@ const roomData = [
 ];
 
 const Stay = () => {
+    const [filters, setFilters] = useState({
+        minPrice: 0,
+        maxPrice: 999, // Set your maximum price limit
+    });
+    const [searchTerm, setSearchTerm] = useState("");
+    const [priceError, setPriceError] = useState("");
+
+
+    const filteredRooms = roomData.filter((room) => {
+        return (
+            (room.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
+            (!isNaN(filters.minPrice) && !isNaN(filters.maxPrice) && parseFloat(room.price) >= filters.minPrice && parseFloat(room.price) <= filters.maxPrice)
+        );
+    });
+    const handleClearFilters = () => {
+        setFilters({
+            minPrice: 0,
+            maxPrice: 999, // Set your maximum price limit
+        });
+        setSearchTerm("");
+    };
     return (
         <div className="stay">
             <div className="words">
@@ -48,9 +69,38 @@ const Stay = () => {
                 <p className="room-sign">Warmth. Care. Peace.</p>
             </div>
             <div className="date-picker">
+                <div className="search-form">
+                    <h3>Search Rooms</h3>
+                    <form>
+                        <input
+                            type="text"
+                            placeholder="Search by room name or type"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </form>
+                </div>
+                <div className="filter-form">
+                    <h3>Filter by Price</h3>
+                    <form>
+                        <input
+                            type="number"
+                            placeholder="Min Price"
+                            value={filters.minPrice}
+                            onChange={(e) => setFilters({ ...filters, minPrice: e.target.value })}
+                        />
+                        <input
+                            type="number"
+                            placeholder="Max Price"
+                            value={filters.maxPrice}
+                            onChange={(e) => setFilters({ ...filters, maxPrice: e.target.value })}
+                        />
+                    </form>
+                </div>
+                <button className="but" onClick={handleClearFilters}>Clear Filters</button>
             </div>
             <div className="room-cards">
-                {roomData.map((room, index) => (
+                {filteredRooms.map((room, index) => (
                     <div className="room-card" key={index}>
                         <div className="room-image">
                             <img src={room.image} alt={room.title} />
@@ -78,6 +128,7 @@ const Stay = () => {
                     </div>
                 ))}
             </div>
+
         </div>
     );
 };
