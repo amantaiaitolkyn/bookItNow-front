@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import { Outlet, Link } from "react-router-dom";
 import NavBar from "./NavBar";
+import { useAuth } from '../hooks/use-auth';
+import {removeUser} from "../store/slices/userSlice";
+
 export default function Header(){
     const [nav, setNav] = useState(false);
-
+    const {isAuth,email} = useAuth();
     return (
         <header>
             <div className="contact-info">
@@ -23,7 +26,7 @@ export default function Header(){
                         <Link to="stay">Stay</Link>
                         <Link to="about">About</Link>
                     </div>
-
+                    {isAuth && <Link to="/profile"><button className="profile-button">{email}</button></Link>}
                 </ul>
                 <div onClick={() => setNav(!nav)} className= "mobile_btn">
                     {nav ? <AiOutlineClose size={30}/> : <AiOutlineMenu  size={30}/>}

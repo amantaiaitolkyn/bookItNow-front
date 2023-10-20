@@ -1,4 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import { useNavigate } from 'react-router-dom';
+
+import { useAuth } from '../hooks/use-auth';
+import {useDispatch} from "react-redux";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
 
 const roomData = [
@@ -41,6 +45,13 @@ const roomData = [
 ];
 
 const Stay = () => {
+    const navigate = useNavigate();
+    const {isAuth} = useAuth();
+    useEffect(() => {
+        if (!isAuth) {
+            navigate("/login");
+        }
+    }, [isAuth, navigate]);
     const [filters, setFilters] = useState({
         minPrice: 0,
         maxPrice: 999, // Set your maximum price limit

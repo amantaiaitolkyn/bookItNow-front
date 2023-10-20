@@ -12,9 +12,6 @@ export default function NavBar(){
                 <div>
                     <span className='name'>Book It</span>
 
-
-
-
             </div>
              </div>
         </div>
