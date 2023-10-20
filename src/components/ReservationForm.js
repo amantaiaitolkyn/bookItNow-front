@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { useNavigate } from 'react-router-dom';
 export default function ReservationForm() {
     const [checkIn, setCheckIn] = useState("");
     const [checkOut, setCheckOut] = useState("");
@@ -7,6 +7,19 @@ export default function ReservationForm() {
     const [adults, setAdults] = useState(1);
     const [children, setChildren] = useState(0);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const navigate = useNavigate();
+
+    const navigateToStayPageAndScroll = () => {
+        navigate('/stay'); // Navigate to the "Stay" page
+
+        // Scroll to the room list section after a short delay to allow the page to render
+        setTimeout(() => {
+            const roomListSection = document.getElementById('room-list');
+            if (roomListSection) {
+                roomListSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 500); // Adjust the delay as needed
+    };
 
     useEffect(() => {
         let timer;
@@ -110,7 +123,7 @@ export default function ReservationForm() {
                         required
                     />
                 </div>
-                <button className="but" type="submit">Submit Reservation</button>
+                <button className="but"  onClick={navigateToStayPageAndScroll} type="submit">Submit Reservation</button>
                 </div>
             </form>
             <div className="col">

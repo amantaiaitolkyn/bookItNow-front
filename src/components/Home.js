@@ -98,6 +98,7 @@ export default function Home() {
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
     };
+
     return (
         <div className="home">
             <button className="logout-button" onClick={()=> dispatch(removeUser())}>Log out</button>{/*logout*/}
