@@ -1,61 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;1,200&family=Caveat&family=Josefin+Sans:wght@100;600&family=Kanit:wght@100&family=Playfair+Display:wght@700;900&family=Roboto+Mono:ital,wght@0,100;1,300&family=Jost&family=Marcellus');
 
 
-.info {
+.info1 {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
-.room-card {
+.room-card1 {
     width: 90%;
     display: flex;
     padding: 5%;
 }
 
-.room-image {
-    display: flex;
+.room-image1 {
+    /* display: flex; */
     justify-content: center;
     align-items: center;
+    padding-top: 5%;
 }
 
-.room-image img {
+.room-image1 img {
     width: 100%;
     height: auto;
 }
 
-.room-details {
+.room-details1 {
     flex: 1;
     color: #333632;
     font-family: "Jost", sans-serif;
 }
 
-.room-header {
+.room-header1 {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
     font-family: "Marcellus", serif;
     color: #1A1B1A;
     font-size: 30px;
+    padding-top: 20px;
 }
 
-.room-header h4 {
+.room-header1 h4 {
     margin: 0;
     font-size: 24px;
 }
 
-.price {
+.price1 {
     font-size: 20px;
     color: #e97735;
 }
 p {
     font-size: 20px;
 }
-.room-size {
+.room-size1 {
     font-size: 18px;
     margin-top: 30px;
 }
 
-.golden {
+.golden1 {
     color: #B99D75;
     font-size: 14px;
 }
@@ -68,17 +70,17 @@ li {
     font-size: 15px;
 }
 
-.icon {
+.icon1 {
     display: flex;
     margin-top: 30px;
-    margin-left: -5%;
+    /* margin-left: -5%; */
 }
 
-.icon img {
+.icon1 img {
     margin-right: 6px;
 }
 
-.reserve {
+.reserve1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,14 +100,10 @@ li {
     padding-top: 20px;
 }
 
-.icon1 {
-    margin-left: -5%;
-}
-
 .s {
     padding-right: 5px;
 }
 
-.icon1 li {
+.icon2 li {
     font-size: 18px;
 }

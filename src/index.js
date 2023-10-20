@@ -5,6 +5,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Stay from "./components/Stay";
 import About from "./components/About";
+import Home from "./components/Home";
 import HandleError from './components/handleErrors';
 import Login from "./components/Login";
 import Register from "./components/Register";
