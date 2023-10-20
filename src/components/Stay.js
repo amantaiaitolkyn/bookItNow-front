@@ -70,7 +70,7 @@ const Stay = () => {
                         </div>
                         <div className="room-details">
                             <div className="room-header">
-                                <Link to={`/rooms/${room.id}`}><h4>{room.title}</h4></Link>
+                                <Link to={`/rooms/${room.id}`}><h4 className="link">{room.title}</h4></Link>
                                 <p className="price">
                                     ${room.price} / NIGHT
                                 </p>

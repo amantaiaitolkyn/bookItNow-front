@@ -214,6 +214,7 @@ html {
 .room-header h4 {
     margin: 0;
     font-size: 24px;
+    color: #333632;
 }
 
 .price {
@@ -237,6 +238,10 @@ html {
     padding: 7px 0;
     /* text-decoration: underline; */
     cursor: pointer;
+}
+
+.bottom h6{
+    color: #333632;
 }
 
 .next {
@@ -660,9 +665,6 @@ html {
     font-size: 15px;
 
 }
-.stay Link{
-    color: #1A1B1A;
-}
 
 .icon {
     display: flex;
@@ -714,12 +716,12 @@ html {
     justify-content: space-between;
     align-items: center;
     font-family: "Marcellus", serif;
-    color: #1A1B1A;
 }
 
 .room-header h4 {
     margin: 0;
     font-size: 24px;
+    color: #333632;
 }
 
 .price {
@@ -745,6 +747,9 @@ html {
     cursor: pointer;
 }
 
+.bottom h6{
+    color: #333632;
+}
 .next {
     padding-left: 10px;
     padding-top: 3px;
