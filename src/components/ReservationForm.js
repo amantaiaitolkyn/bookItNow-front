@@ -10,7 +10,7 @@ export default function ReservationForm() {
     const navigate = useNavigate();
 
     const navigateToStayPageAndScroll = () => {
-        navigate('/stay'); // Navigate to the "Stay" page
+        navigate('/rooms'); // Navigate to the "Stay" page
 
         // Scroll to the room list section after a short delay to allow the page to render
         setTimeout(() => {

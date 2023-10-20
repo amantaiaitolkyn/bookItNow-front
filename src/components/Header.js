@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import { useAuth } from '../hooks/use-auth';
-import {removeUser} from "../store/slices/userSlice";
+// import {removeUser} from "../store/slices/userSlice";
 
 export default function Header(){
     const [nav, setNav] = useState(false);
@@ -23,7 +23,7 @@ export default function Header(){
                     <div className="navigation-links">
                         <Link to="/"></Link>
                         <Link to="home">Home</Link>
-                        <Link to="stay">Stay</Link>
+                        <Link to="rooms">Stay</Link>
                         <Link to="about">About</Link>
                     </div>
                     {isAuth && <Link to="/profile"><button className="profile-button">{email}</button></Link>}

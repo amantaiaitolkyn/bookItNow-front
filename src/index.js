@@ -6,7 +6,7 @@ import { createBrowserRouter, Routes, Route, RouterProvider } from "react-router
 import Stay from "./components/Stay";
 import About from "./components/About";
 import Home from "./components/Home";
-import Header from './components/Header';
+import RoomDetails from './components/RoomDetails';
 import HandleError from './components/handleErrors';
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -32,8 +32,12 @@ const router = createBrowserRouter([
         element: <Home/>,
       }, 
       {
-        path: "stay",
+        path: "rooms",
         element: <Stay/>,
+      },
+      {
+        path: "rooms/:id",
+        element: <RoomDetails/>,
       },
       {
         path: "about",

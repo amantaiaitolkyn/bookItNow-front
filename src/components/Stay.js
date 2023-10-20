@@ -1,57 +1,9 @@
-import React, {useEffect, useState} from "react";
-import { useNavigate } from 'react-router-dom';
-
-import { useAuth } from '../hooks/use-auth';
-import {useDispatch} from "react-redux";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
-
-const roomData = [
-    {
-        title: "Signature Suite",
-        size: "60m²",
-        view: "Great Mountain View",
-        guests: "4",
-        beds: "2",
-        bathrooms: "1",
-        price: "399",
-        description:
-            "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square meters, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
-        image: "https://cozystay.loftocean.com/mountain-hotel/wp-content/uploads/sites/7/2023/04/img-25-1200x801.jpg"
-    },
-    {
-        title: "Deluxe Room",
-        size: "35m²",
-        view: "Village View",
-        guests: "2",
-        beds: "1",
-        bathrooms: "1",
-        price: "199",
-        description:
-            "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square meters, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
-        image: "https://cozystay.loftocean.com/mountain-hotel/wp-content/uploads/sites/7/2023/04/marvin-meyer-fBdlytm6Hp8-unsplash.jpg"
-    },
-    {
-        title: "Double Room",
-        size: "25m²",
-        view: "Partial Mountain View",
-        guests: "2",
-        beds: "2",
-        bathrooms: "1",
-        price: "219",
-        description:
-            "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square metres, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
-        image: "https://cozystay.loftocean.com/mountain-hotel/wp-content/uploads/sites/7/2023/04/ralph-ravi-kayden-FqqiAvJejto-unsplash-1200x800.jpg"
-    }
-];
+import roomData from "./datas.js"
 
 const Stay = () => {
-    const navigate = useNavigate();
-    const {isAuth} = useAuth();
-    useEffect(() => {
-        if (!isAuth) {
-            navigate("/login");
-        }
-    }, [isAuth, navigate]);
     const [filters, setFilters] = useState({
         minPrice: 0,
         maxPrice: 999, // Set your maximum price limit
@@ -79,7 +31,7 @@ const Stay = () => {
                 <h2>Rooms & Suites</h2>
                 <p className="room-sign">Warmth. Care. Peace.</p>
             </div>
-            <div className="date-picker" id="room-list">
+            <div className="date-picker">
                 <div className="search-form">
                     <h3>Search Rooms</h3>
                     <form>
@@ -112,27 +64,27 @@ const Stay = () => {
             </div>
             <div className="room-cards">
                 {filteredRooms.map((room, index) => (
-                    <div className="room-card" key={index}>
+                    <div className="room-card" key={room.id}>
                         <div className="room-image">
-                            <img src={room.image} alt={room.title} />
+                            <Link to={`/rooms/${room.id}`}><img src={room.image} alt={room.title} /></Link>
                         </div>
                         <div className="room-details">
                             <div className="room-header">
-                                <h4>{room.title}</h4>
+                                <Link to={`/rooms/${room.id}`}><h4 className="link">{room.title}</h4></Link>
                                 <p className="price">
                                     ${room.price} / NIGHT
                                 </p>
                             </div>
-                            <p className="room-size golden">{room.size} / {room.view} / {room.guests} Guests</p>
+                            <p className="room-size golden">{room.size} / {room.view} / {room.guests} {room.guests === 1 ? 'Guest' : 'Guests'}</p>
                             <ul className="icon">
                                 <li><img src='/maximize.png' alt='Maximize' height={20}/>  {room.size}</li>
-                                <li><img src='/user.png' alt='User' height={20}/>  {room.guests} Guests</li>
-                                <li><img src='/bed.png' alt='Bed' height={20}/> {room.beds} Bed</li>
-                                <li><img src='/bathtub.png' alt='Bathtub' height={20}/> {room.bathrooms} Bathroom</li>
+                                <li><img src='/user.png' alt='User' height={20}/>  {room.guests} {room.guests === 1 ? 'Guest' : 'Guests'}</li>
+                                <li><img src='/bed.png' alt='Bed' height={20}/> {room.beds} {room.beds === 1 ? 'Bed' : 'Beds'}</li>
+                                <li><img src='/bathtub.png' alt='Bathtub' height={20}/> {room.bathrooms} {room.bathrooms === 1 ? 'Bathroom' : 'Bathrooms'}</li>
                             </ul>
                             <p className="room-size">{room.description}</p>
                             <div className="bottom">
-                                <h6>Discover more</h6>
+                                <Link to={`/rooms/${room.id}`}><h6>Discover more</h6></Link>
                                 <img className='next' src='/next.png' alt='Next' height={18}/>
                             </div>
                         </div>

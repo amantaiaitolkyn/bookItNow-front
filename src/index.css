@@ -214,6 +214,7 @@ html {
 .room-header h4 {
     margin: 0;
     font-size: 24px;
+    color: #333632;
 }
 
 .price {
@@ -239,6 +240,9 @@ html {
     cursor: pointer;
 }
 
+.bottom h6 {
+    color: #333632;
+}
 .next {
     padding-left: 10px;
     padding-top: 3px;
