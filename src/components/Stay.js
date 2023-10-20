@@ -79,7 +79,7 @@ const Stay = () => {
                 <h2>Rooms & Suites</h2>
                 <p className="room-sign">Warmth. Care. Peace.</p>
             </div>
-            <div className="date-picker">
+            <div className="date-picker" id="room-list">
                 <div className="search-form">
                     <h3>Search Rooms</h3>
                     <form>
