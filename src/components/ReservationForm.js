@@ -71,67 +71,67 @@ export default function ReservationForm() {
         <div className="reservation-form">
             <form onSubmit={handleSubmit}>
                 <div className="form-group row">
-                <div className="col">
-                    <label htmlFor="checkIn">Check-in Date</label>
-                    <input
-                        type="date"
-                        id="checkIn"
-                        value={checkIn}
-                        onChange={handleCheckInChange}
-                        required
-                    />
-                </div>
-                <div className="col">
-                    <label htmlFor="checkOut">Check-out Date</label>
-                    <input
-                        type="date"
-                        id="checkOut"
-                        value={checkOut}
-                        onChange={handleCheckOutChange}
-                        required
-                    />
-                </div>
-             <div className="col">
-                    <label className="roomNumber">Room Number</label>
-                    <input
-                        type="text"
-                        id="roomNumber"
-                        value={roomNumber}
-                        onChange={handleRoomNumberChange}
-                        required
-                    />
-                </div>
-                <div className="col">
-                    <label htmlFor="adults">Number of Adults</label>
-                    <input
-                        type="number"
-                        id="adults"
-                        value={adults}
-                        onChange={handleAdultsChange}
-                        min="1"
-                        required
-                    />
-                </div>
-                <div className="col">
-                    <label htmlFor="children">Number of Children</label>
-                    <input
-                        type="number"
-                        id="children"
-                        value={children}
-                        onChange={handleChildrenChange}
-                        min="0"
-                        required
-                    />
-                </div>
-                <button className="but"  onClick={navigateToStayPageAndScroll} type="submit">Submit Reservation</button>
+                    <div className="col">
+                        <label htmlFor="checkIn">Check-in Date</label>
+                        <input
+                            type="date"
+                            id="checkIn"
+                            value={checkIn}
+                            onChange={handleCheckInChange}
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <label htmlFor="checkOut">Check-out Date</label>
+                        <input
+                            type="date"
+                            id="checkOut"
+                            value={checkOut}
+                            onChange={handleCheckOutChange}
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <label className="roomNumber">Room Number</label>
+                        <input
+                            type="text"
+                            id="roomNumber"
+                            value={roomNumber}
+                            onChange={handleRoomNumberChange}
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <label htmlFor="adults">Number of Adults</label>
+                        <input
+                            type="number"
+                            id="adults"
+                            value={adults}
+                            onChange={handleAdultsChange}
+                            min="1"
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <label htmlFor="children">Number of Children</label>
+                        <input
+                            type="number"
+                            id="children"
+                            value={children}
+                            onChange={handleChildrenChange}
+                            min="0"
+                            required
+                        />
+                    </div>
+                    <button className="but"  onClick={navigateToStayPageAndScroll} type="submit">Submit Reservation</button>
                 </div>
             </form>
             <div className="col">
-            {isSubmitted && (
-                <div className="success-message">
-                    Reservation Successful!
-                </div>
-            )}
+                {isSubmitted && (
+                    <div className="success-message">
+                        Reservation Successful!
+                    </div>
+                )}
             </div>
         </div>
     );

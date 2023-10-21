@@ -7,6 +7,7 @@ const roomData = [
         guests: 4,
         beds: 2,
         bathrooms: 1,
+        isReserved: false,
         price: 399,
         description:
             "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square meters, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
@@ -21,6 +22,7 @@ const roomData = [
         guests: 2,
         beds: 1,
         bathrooms: 1,
+        isReserved: false,
         price: 199,
         description:
             "The south-facing aspect affords unimpeded views of the Alps. Measuring 42 square meters, with traditional Alpine woods, warm fireplaces, and natural-stone touches.",
@@ -34,6 +36,7 @@ const roomData = [
         view: "Partial Mountain View",
         guests: 2,
         beds: 2,
+        isReserved: false,
         bathrooms: 1,
         price: 219,
         description:

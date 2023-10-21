@@ -13,6 +13,7 @@ import Register from "./components/Register";
 import Profile from "./components/Profile"
 import {Provider} from 'react-redux';
 import {store} from './store';
+import {BookedRoomsProvider} from "./bookedRoomsContext";
 import './firebase';
 
 
@@ -63,8 +64,10 @@ const router = createBrowserRouter([
 
 ])
 root.render(
-    <Provider store={store}>
-      <RouterProvider router = {router} />
-    </Provider>
+    <BookedRoomsProvider>
+      <Provider store={store}>
+        <RouterProvider router = {router} />
+      </Provider>
+    </BookedRoomsProvider>
 );
 

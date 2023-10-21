@@ -1,8 +1,22 @@
 import React, {useState} from "react";
+import bookedRooms from "./RoomDetails"
+import Register from "./Register";
+import {useBookedRooms} from "../bookedRoomsContext";
+function Profile() {
+    const { bookedRooms } = useBookedRooms();
 
-const Profile = () => {
     return (
-        <h1>Your Profile</h1>
+        <div className="user-profile">
+            <h2>Profile</h2>
+            <h3>Reserved rooms:</h3>
+            <ul>
+                {bookedRooms.map((bookedRoom, index) => (
+                    <li key={index}>
+                        {bookedRoom.title} - ${bookedRoom.price} / NIGHT
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 

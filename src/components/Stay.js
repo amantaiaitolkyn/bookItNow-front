@@ -1,9 +1,19 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../hooks/use-auth';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
 import roomData from "./datas.js"
 
 const Stay = () => {
+
+    const navigate = useNavigate();
+    const {isAuth} = useAuth();
+    useEffect(() => {
+        if (!isAuth) {
+            navigate("/login");
+        }
+    }, [isAuth, navigate]);
     const [filters, setFilters] = useState({
         minPrice: 0,
         maxPrice: 999, // Set your maximum price limit
@@ -18,6 +28,7 @@ const Stay = () => {
             (!isNaN(filters.minPrice) && !isNaN(filters.maxPrice) && parseFloat(room.price) >= filters.minPrice && parseFloat(room.price) <= filters.maxPrice)
         );
     });
+
     const handleClearFilters = () => {
         setFilters({
             minPrice: 0,
@@ -63,8 +74,9 @@ const Stay = () => {
                 <button className="but" onClick={handleClearFilters}>Clear Filters</button>
             </div>
             <div className="room-cards">
-                {filteredRooms.map((room, index) => (
-                    <div className="room-card" key={room.id}>
+                { filteredRooms.map((room, index) => (
+
+                   <div className="room-card" key={room.id}>
                         <div className="room-image">
                             <Link to={`/rooms/${room.id}`}><img src={room.image} alt={room.title} /></Link>
                         </div>

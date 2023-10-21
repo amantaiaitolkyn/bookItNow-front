@@ -59,11 +59,11 @@ html {
     display: flex; /* Display items in one row */
     justify-content: space-between; /* Spread items evenly in the row */
     padding: 20px 0 0 0 ;
-    font-size: 14px;
 }
 
 .contact-info p {
     margin: 2px 50px; /* Adjust margins for spacing */
+    font-size: 16px;
 }
 
 .contact-info a {
