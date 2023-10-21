@@ -3,8 +3,7 @@ import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import { useAuth } from '../hooks/use-auth';
-// import {removeUser} from "../store/slices/userSlice";
-
+// import {removeUser} from "../store/slices/userSlice"
 export default function Header(){
     const [nav, setNav] = useState(false);
     const {isAuth,email} = useAuth();

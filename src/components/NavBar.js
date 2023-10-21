@@ -11,7 +11,6 @@ export default function NavBar(){
                 </Link>
                 <div>
                     <span className='name'>Book It</span>
-
             </div>
              </div>
         </div>

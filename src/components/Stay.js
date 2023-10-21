@@ -63,6 +63,7 @@ const Stay = () => {
                             value={filters.minPrice}
                             onChange={(e) => setFilters({ ...filters, minPrice: e.target.value })}
                         />
+
                         <input
                             type="number"
                             placeholder="Max Price"

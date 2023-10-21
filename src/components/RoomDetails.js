@@ -23,6 +23,7 @@ const RoomDetail = () => {
         <><div className="room-image1">
             <img src={room.image} alt={room.title} />
         </div>
+
             <div className='info1'>
                 <div className='room-card1'>
                     <div className="room-details1">

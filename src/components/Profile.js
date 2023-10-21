@@ -15,6 +15,7 @@ function Profile() {
                         {bookedRoom.title} - ${bookedRoom.price} / NIGHT
                     </li>
                 ))}
+
             </ul>
         </div>
     );

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 export default function Footer(){
     const [isAgreed, setIsAgreed] = useState(false);
-
     const handleAgreeToggle = () => {
         setIsAgreed(!isAgreed);
     };

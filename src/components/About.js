@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/use-auth';
 
+
 const About = () => {
     const navigate = useNavigate();
     const {isAuth} = useAuth();

@@ -26,7 +26,6 @@ function MapComponent(props) {
     );
 }
 const WrappedMapComponent = withScriptjs(withGoogleMap(MapComponent));
-
 export default function Home() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
