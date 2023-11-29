@@ -9,6 +9,7 @@ export default function ReservationForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const navigate = useNavigate();
 
+    const roomlist= React.createRef();
     const navigateToStayPageAndScroll = () => {
         navigate('/rooms'); // Navigate to the "Stay" page
 
@@ -101,7 +102,7 @@ export default function ReservationForm() {
                             required
                         />
                     </div>
-                    <div className="col">
+                    <div className="col"  ref={roomlist}>
                         <label htmlFor="adults">Number of Adults</label>
                         <input
                             type="number"

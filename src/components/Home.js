@@ -11,8 +11,6 @@ import { useAuth } from '../hooks/use-auth';
 import {removeUser} from '../store/slices/userSlice'
 
 
-
-// Replace with your Google Maps API Key
 const googleMapsAPIKey = "AIzaSyD5MCvK4Bt-bxFRy_XYBmRPYUhIzgANfb8";
 
 function MapComponent(props) {
@@ -49,7 +47,7 @@ export default function Home() {
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
             );
         }, 3000); // Change images every 3 seconds (3000 milliseconds)
-        // Get geolocation when the component mounts
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 setGeolocation({
@@ -60,7 +58,7 @@ export default function Home() {
         }
         return () => clearInterval(interval);
     }, []);
-    useEffect(() => {
+    React.useLayoutEffect(() => {
         if (!isAuth) {
             navigate("/login");
         }
@@ -84,7 +82,6 @@ export default function Home() {
         e.preventDefault();
         console.log(formData);
 
-        // Clear the form data after submission
         setFormData({
             name: "",
             email: "",
@@ -98,7 +95,7 @@ export default function Home() {
         );
     };
 
-    return (
+    return  (
         <div className="home">
             <button className="logout-button" onClick={()=> dispatch(removeUser())}>Log out</button>{/*logout*/}
             <div className="home-page">
@@ -180,3 +177,105 @@ export default function Home() {
         </div>
     );
 }
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset="utf-8" />
+//     <title>METANIT.COM</title>
+// </head>
+// <body>
+// <div id="app"></div>
+//
+// <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+// <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+// <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+// <script type="text/babel">
+//
+//     function User() {
+//     const [name, setName] = React.useState("Tom");
+//     const [age, setAge] = React.useState(36);
+//
+//     React.useEffect(() => {
+//     // Изменяем заголовок html-страницы
+//     document.title = `Привет ${name}`;
+//     console.log("useEffect");
+// });
+//
+//     const changeName = (event) => setName(event.target.value);
+//     const changeAge =(event) => setAge(event.target.value);
+//
+//     return (
+//     <div>
+//     <h3>Имя: {name}</h3>
+// <h3>Возраст: {age}</h3>
+//
+// <div>
+//     <p>Имя: <input type="text" value={name} onChange={changeName} /></p>
+//     <p>Возраст: <input type="number" value={age} onChange={changeAge} /></p>
+// </div>
+// </div>
+// );
+// }
+//
+// ReactDOM.createRoot(
+// document.getElementById("app")
+// )
+// .render(
+// <User />
+// );
+// </script>
+// </body>
+// </html>
+
+// import React, { useState, useEffect } from 'react';
+//
+// import React, { useState, useEffect } from 'react';
+//
+// function Example() {
+//     const [count, setCount] = useState(0);
+//
+//     useEffect(() => {
+//         document.title = `Вы нажали ${count} раз`;
+//     });
+//
+//     return (
+//         <div>
+//             <p>Вы нажали {count} раз</p>
+//             <button onClick={() => setCount(count + 1)}>
+//                 Нажми на меня
+//             </button>
+//         </div>
+//     );
+// }
+
+// import { useRef, useLayoutEffect, useState } from 'react';
+// import { createPortal } from 'react-dom';
+// import TooltipContainer from './TooltipContainer.js';
+//
+// export default function Tooltip({ children, targetRect }) {
+//     const ref = useRef(null);
+//     const [tooltipHeight, setTooltipHeight] = useState(0);
+//
+//     useLayoutEffect(() => {
+//         const { height } = ref.current.getBoundingClientRect();
+//         setTooltipHeight(height);
+//     }, []);
+//
+//     let tooltipX = 0;
+//     let tooltipY = 0;
+//     if (targetRect !== null) {
+//         tooltipX = targetRect.left;
+//         tooltipY = targetRect.top - tooltipHeight;
+//         if (tooltipY < 0) {
+//             // It doesn't fit above, so place below.
+//             tooltipY = targetRect.bottom;
+//         }
+//     }
+//
+//     return createPortal(
+//         <TooltipContainer x={tooltipX} y={tooltipY} contentRef={ref}>
+//             {children}
+//         </TooltipContainer>,
+//         document.body
+//     );
+// }
