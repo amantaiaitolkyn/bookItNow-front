@@ -17,6 +17,9 @@ import {BookedRoomsProvider} from "./bookedRoomsContext";
 import './firebase';
 
 
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {

@@ -2,7 +2,7 @@ import './RoomDetails.css';
 import React from "react";
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import roomData from "./datas.js"
+import roomData from "./datas"
 import {useBookedRooms} from "../bookedRoomsContext";
 
 function fetchRoomDetailsById(id) {

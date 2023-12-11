@@ -1,21 +1,8 @@
-// About.js
-
-// About.js
-
-import React, {useEffect} from "react";
+import React from "react";
 import Footer from "./Footer";
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../hooks/use-auth';
 
 
 const About = () => {
-    const navigate = useNavigate();
-    const {isAuth} = useAuth();
-    useEffect(() => {
-        if (!isAuth) {
-            navigate("/login");
-        }
-    }, [isAuth, navigate]);
     return (
         <div className="about">
             <div className="about-container">
@@ -32,7 +19,6 @@ const About = () => {
                 </p>
             </div>
             <div className="video-container">
-                {/* Add your video iframe here */}
                 <iframe
                     title="Hotel Video"
                     width="560"

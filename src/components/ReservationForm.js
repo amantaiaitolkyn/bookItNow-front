@@ -10,15 +10,14 @@ export default function ReservationForm() {
     const navigate = useNavigate();
 
     const navigateToStayPageAndScroll = () => {
-        navigate('/rooms'); // Navigate to the "Stay" page
+        navigate('/rooms');
 
-        // Scroll to the room list section after a short delay to allow the page to render
         setTimeout(() => {
             const roomListSection = document.getElementById('room-list');
             if (roomListSection) {
                 roomListSection.scrollIntoView({ behavior: 'smooth' });
             }
-        }, 500); // Adjust the delay as needed
+        }, 500);
     };
 
     useEffect(() => {
@@ -54,9 +53,7 @@ export default function ReservationForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add your reservation submission logic here
 
-        // Clear form fields
         setCheckIn("");
         setCheckOut("");
         setRoomNumber("");

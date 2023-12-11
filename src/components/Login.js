@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-// import './LoginRegister.css';
+
 import {useDispatch} from 'react-redux';
-// import {setUser} from "../store/slices/userSlice";
+
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import {setUser} from "../store/slices/userSlice";

@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-// import Header from "./Header";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import ReservationForm from "./ReservationForm";
@@ -12,7 +11,6 @@ import {removeUser} from '../store/slices/userSlice'
 
 
 
-// Replace with your Google Maps API Key
 const googleMapsAPIKey = "AIzaSyD5MCvK4Bt-bxFRy_XYBmRPYUhIzgANfb8";
 
 function MapComponent(props) {
@@ -79,12 +77,10 @@ export default function Home() {
     };
 
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
 
-        // Clear the form data after submission
         setFormData({
             name: "",
             email: "",
@@ -161,7 +157,6 @@ export default function Home() {
                 </form>
 
             </div>
-            {/* Display the map */}
 
             {geolocation && (
                 <div className="map">

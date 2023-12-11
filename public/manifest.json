@@ -1,0 +1,21 @@
+{
+  "short_name": "Booking App",
+  "name": "Booking App PWA",
+  "icons": [
+    {
+      "src": "/images/logo5.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    },
+    {
+      "src": "/images/logo5.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

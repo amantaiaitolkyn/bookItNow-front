@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/use-auth';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
+
 import roomData from "./datas.js"
 
 const Stay = () => {
@@ -16,7 +16,7 @@ const Stay = () => {
     }, [isAuth, navigate]);
     const [filters, setFilters] = useState({
         minPrice: 0,
-        maxPrice: 999, // Set your maximum price limit
+        maxPrice: 999,
     });
     const [searchTerm, setSearchTerm] = useState("");
     const [priceError, setPriceError] = useState("");
@@ -32,7 +32,7 @@ const Stay = () => {
     const handleClearFilters = () => {
         setFilters({
             minPrice: 0,
-            maxPrice: 999, // Set your maximum price limit
+            maxPrice: 999,
         });
         setSearchTerm("");
     };
