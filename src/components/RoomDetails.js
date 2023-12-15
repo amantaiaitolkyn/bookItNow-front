@@ -1,7 +1,7 @@
 import './RoomDetails.css';
 import React from "react";
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import roomData from "./datas"
 import {useBookedRooms} from "../bookedRoomsContext";
 
@@ -10,14 +10,14 @@ function fetchRoomDetailsById(id) {
 }
 
 const RoomDetail = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const room = fetchRoomDetailsById(parseInt(id));
     const { addToBookedRooms } = useBookedRooms();
-    const [isReserved, setReserved] = useState(false);
 
-    const handleReserveNow = () => {
-        addToBookedRooms(room);
-        setReserved(true);
+
+    const handleBack= () => {
+        navigate('/rooms');
     };
     return (
         <><div className="room-image1">
@@ -63,8 +63,8 @@ const RoomDetail = () => {
                         <p>
                             Price: <span className="price1">${room.price} / NIGHT</span>
                         </p>
+                        <button className='reserve1' onClick={handleBack}>back</button>
                     </div>
-                    {!isReserved && <button className='reserve1' onClick={handleReserveNow}>Reserve now</button>}
                 </div>
             </div>
         </>

@@ -2,11 +2,12 @@ import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/use-auth';
-
 import roomData from "./datas.js"
+import {useBookedRooms} from "../bookedRoomsContext";
 
 const Stay = () => {
-
+    const {bookedRooms, addToBookedRooms } = useBookedRooms();
+    const [rooms, setRooms] = useState(roomData);
     const navigate = useNavigate();
     const {isAuth} = useAuth();
     useEffect(() => {
@@ -22,12 +23,30 @@ const Stay = () => {
     const [priceError, setPriceError] = useState("");
 
 
-    const filteredRooms = roomData.filter((room) => {
+    const filteredRooms = rooms.filter(room => {
+        const isRoomReserved = bookedRooms.some(bookedRoom => bookedRoom.id === room.id);
+
         return (
-            (room.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
-            (!isNaN(filters.minPrice) && !isNaN(filters.maxPrice) && parseFloat(room.price) >= filters.minPrice && parseFloat(room.price) <= filters.maxPrice)
+            !isRoomReserved &&
+            room.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+            !isNaN(filters.minPrice) && !isNaN(filters.maxPrice) &&
+            parseFloat(room.price) >= filters.minPrice && parseFloat(room.price) <= filters.maxPrice
         );
     });
+
+    const handleReserve = (roomId) => {
+        // Find the room by its ID and update the isReserved property
+        const updatedRooms = rooms.map(room =>
+            room.id === roomId ? { ...room, isReserved: true } : room
+        );
+        const roomToBook = rooms.find(room => room.id === roomId);
+        addToBookedRooms(roomToBook)
+        // Update state with the modified rooms data
+        setRooms(updatedRooms);
+        alert("The room is reserved")
+    };
+
+
 
     const handleClearFilters = () => {
         setFilters({
@@ -38,6 +57,7 @@ const Stay = () => {
     };
     return (
         <div className="stay">
+
             <div className="words">
                 <h2>Rooms & Suites</h2>
                 <p className="room-sign">Warmth. Care. Peace.</p>
@@ -75,9 +95,10 @@ const Stay = () => {
                 <button className="but" onClick={handleClearFilters}>Clear Filters</button>
             </div>
             <div className="room-cards">
-                { filteredRooms.map((room, index) => (
-
-                   <div className="room-card" key={room.id}>
+                {filteredRooms
+                    .filter(room => !room.isReserved || bookedRooms.some(bookedRoom => bookedRoom.id === room.id))
+                    .map((room, index) => (
+                    <div className="room-card" key={room.id}>
                         <div className="room-image">
                             <Link to={`/rooms/${room.id}`}><img src={room.image} alt={room.title} /></Link>
                         </div>
@@ -96,6 +117,9 @@ const Stay = () => {
                                 <li><img src='/bathtub.png' alt='Bathtub' height={20}/> {room.bathrooms} {room.bathrooms === 1 ? 'Bathroom' : 'Bathrooms'}</li>
                             </ul>
                             <p className="room-size">{room.description}</p>
+                            {!room.isReserved && (
+                                <button className='reserve1' onClick={() => handleReserve(room.id)}>Reserve now</button>
+                            )}
                             <div className="bottom">
                                 <Link to={`/rooms/${room.id}`}><h6>Discover more</h6></Link>
                                 <img className='next' src='/next.png' alt='Next' height={18}/>
