@@ -11,6 +11,7 @@ import HandleError from './components/handleErrors';
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Profile from "./components/Profile"
+import ChangeInfo from "./components/ChangeInfo"
 import {Provider} from 'react-redux';
 import {store} from './store';
 import {BookedRoomsProvider} from "./bookedRoomsContext";
@@ -59,7 +60,11 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile/>,
-      }
+      },
+      {
+        path: "change-info",
+        element: <ChangeInfo/>,
+      },
 
     ]
   } 

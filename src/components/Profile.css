@@ -6,10 +6,12 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .top{
-    margin-top: 100px;
+    margin-top: 5px;
+    margin-bottom: 100px;
 }
 
 h2 {
@@ -60,4 +62,18 @@ input {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.b{
+    margin-left: 74%;
+    width: 250px;
+    background-color: #0f1010;
+    color: #e2eaf3;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+}
+
+.b:hover{
+    background-color: #939393;
 }
