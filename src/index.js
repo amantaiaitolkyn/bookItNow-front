@@ -15,6 +15,7 @@ import {Provider} from 'react-redux';
 import {store} from './store';
 import {BookedRoomsProvider} from "./bookedRoomsContext";
 import './firebase';
+import { UserProvider} from "./UserContext";
 
 
 
@@ -66,9 +67,11 @@ const router = createBrowserRouter([
 ])
 root.render(
     <BookedRoomsProvider>
-      <Provider store={store}>
-        <RouterProvider router = {router} />
-      </Provider>
+      <UserProvider>
+          <Provider store={store}>
+            <RouterProvider router = {router} />
+          </Provider>
+      </UserProvider>
     </BookedRoomsProvider>
 );
 
