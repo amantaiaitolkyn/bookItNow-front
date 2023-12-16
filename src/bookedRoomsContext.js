@@ -1,10 +1,15 @@
-import { createContext, useContext, useState } from 'react';
-import React from "react";
+import React, { createContext, useContext, useState } from 'react';
 
 const BookedRoomsContext = createContext();
 
 export function useBookedRooms() {
-  return useContext(BookedRoomsContext);
+  const context = useContext(BookedRoomsContext);
+
+  if (!context) {
+    throw new Error('useBookedRooms must be used within a BookedRoomsProvider');
+  }
+
+  return context;
 }
 
 export function BookedRoomsProvider({ children }) {
@@ -15,8 +20,8 @@ export function BookedRoomsProvider({ children }) {
   };
 
   return (
-    <BookedRoomsContext.Provider value={{ bookedRooms, addToBookedRooms }}>
-      {children}
-    </BookedRoomsContext.Provider>
+      <BookedRoomsContext.Provider value={{ bookedRooms, setBookedRooms, addToBookedRooms }}>
+        {children}
+      </BookedRoomsContext.Provider>
   );
 }
