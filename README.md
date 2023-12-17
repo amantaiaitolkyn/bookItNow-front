@@ -117,6 +117,7 @@ The application consists of four main pages:
 
 - **Progressive Web App (PWA):**
     - The project is configured as a Progressive Web App, featuring an installable icon, caching with a service worker for offline access.
+      ![PWA](images/pwa1.png)
 
 ## Room Details
 
@@ -130,6 +131,7 @@ The application consists of four main pages:
 The application is hosted on Netlify for free.
 
 Visit the live site: [https://www.netlify.com/]
+https://marvelous-twilight-8c97f7.netlify.app/
 
 ## Troubleshooting
 
