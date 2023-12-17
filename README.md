@@ -117,6 +117,7 @@ The application consists of four main pages:
 
 - **Progressive Web App (PWA):**
     - The project is configured as a Progressive Web App, featuring an installable icon, caching with a service worker for offline access.
+      ![PWA](images/pwa1.png)
 
 ## Room Details
 
