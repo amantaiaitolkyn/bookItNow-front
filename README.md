@@ -130,6 +130,7 @@ The application consists of four main pages:
 The application is hosted on Netlify for free.
 
 Visit the live site: [https://www.netlify.com/]
+https://marvelous-twilight-8c97f7.netlify.app/
 
 ## Troubleshooting
 
