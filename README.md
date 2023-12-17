@@ -65,6 +65,7 @@ Our project, Booking Hotel, is built with React and Firebase, providing the foll
 
 2. **Payment Email Notifications:**
     - When booking a room, users receive payment email notifications.
+    ![Email](images/email.jpg)
 
 3. **Booking Form:**
     - The application includes a booking form with a calendar and person counter.
