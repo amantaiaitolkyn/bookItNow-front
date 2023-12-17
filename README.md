@@ -1,5 +1,13 @@
 # Booking Hotel - Getting Started
 
+**Created by:**
+- [SamSweet04](https://github.com/SamSweet04)
+- [amantaiaitolkyn](https://github.com/amantaiaitolkyn)
+- [ami-nt](https://github.com/ami-nt)
+
+**2023 Fall KBTU December**
+
+
 This project, Booking Hotel, is a React-based web application created using Create React App. Below are the available scripts and instructions to get you started with the development environment.
 
 ## Available Scripts
